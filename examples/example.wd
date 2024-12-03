@@ -1,0 +1,24 @@
+@meta {
+    title "This is a test"
+    author "single author"
+    page "A4"
+    style "default.css"
+}
+
+@tableofcontent
+
+@wide {
+    text that is wide and spans the whole horizontal paper
+}
+
+@column[2] {
+    text within the first column
+    # Title Within the First Column
+    meow meow meow
+    @next
+
+    same thing occurring on the next column
+    ---
+}
+
+@end

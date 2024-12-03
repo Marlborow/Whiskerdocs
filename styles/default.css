@@ -1,0 +1,50 @@
+/* styles/default.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.wide {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+}
+
+.page-break {
+    page-break-after: always;
+}
+
+.table-of-contents {
+    margin-bottom: 30px;
+}
+
+.table-of-contents ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.table-of-contents li {
+    margin: 5px 0;
+}
+
+.custom-function {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border: 1px solid #4dd0e1;
+    margin-top: 10px;
+}
+
