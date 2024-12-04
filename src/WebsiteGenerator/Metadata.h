@@ -15,7 +15,6 @@ class Metadata {
         char* author;
         char* title;
         char* stylesheet;
-        void setData(char*& dest, const char* data);
 };
 
 #endif

@@ -2,6 +2,10 @@
 
 WebsiteGenerator::WebsiteGenerator(const char* file)
 {
+    sourceCode = nullptr;
+    webpage    = nullptr;
+    metadata   = nullptr;
+
     if (file == nullptr)
     {
         this->interpret_success = false;
@@ -15,24 +19,21 @@ WebsiteGenerator::WebsiteGenerator(const char* file)
         printf("Unable to interprete: %s\n", file);
         return;
     }
-    char buffer[2048 * 2];
+    char buffer[2048];
     size_t bytesRead = fread(buffer, sizeof(char), sizeof(buffer) - 1, sourceFile);
     buffer[bytesRead] = '\0';
 
     sourceCode = new char[bytesRead + 1];
     strcpy(sourceCode, buffer);
-    metadata = new Metadata();
     printf("%s", sourceCode);
-
-
     fclose(sourceFile);
-
 }
 
 WebsiteGenerator::~WebsiteGenerator()
 {
-    delete [] sourceCode;
-    delete [] metadata;
+    if(sourceCode != nullptr) delete [] sourceCode;
+    if(webpage    != nullptr) delete webpage;
+    if(metadata   != nullptr) delete [] metadata;
 }
 
 bool WebsiteGenerator::interpreted() const
