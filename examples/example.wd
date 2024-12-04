@@ -1,7 +1,6 @@
 @meta {
     title "This is a test"
     author "single author"
-    page "A4"
     style "default.css"
 }
 
