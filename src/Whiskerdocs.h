@@ -5,8 +5,6 @@
 #include <cstdio>
 #include "WebsiteGenerator.h"
 
-
-
 class Whiskerdocs {
     private:
         bool init_success;
