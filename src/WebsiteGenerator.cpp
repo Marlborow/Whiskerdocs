@@ -11,7 +11,7 @@ WebsiteGenerator::WebsiteGenerator(const char* file)
 
     FILE* sourceFile = fopen(file,"r");
     if(!sourceFile){
-        this->interpret_success = false;
+    this->interpret_success = false;
         printf("Unable to interprete: %s\n", file);
         return;
     }
@@ -31,18 +31,8 @@ WebsiteGenerator::WebsiteGenerator(const char* file)
 
 WebsiteGenerator::~WebsiteGenerator()
 {
-
-    if(sourceCode != nullptr)
-    {
-        delete sourceCode;
-        sourceCode = nullptr;
-    }
-
-    if(metadata != nullptr)
-    {
-       delete metadata;
-       metadata = nullptr;
-    }
+    delete [] sourceCode;
+    delete [] metadata;
 }
 
 bool WebsiteGenerator::interpreted() const

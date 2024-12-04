@@ -21,24 +21,9 @@ Whiskerdocs::Whiskerdocs(const char* file)
 Whiskerdocs::~Whiskerdocs()
 {
     //Clean up pointers.
-    if(file_extension)
-    {
-        delete file_extension;
-        file_extension = nullptr;
-
-    }
-
-    if(filename)
-    {
-        delete filename;
-        filename = nullptr;
-    }
-
-    if(websiteGenerator)
-    {
-        delete websiteGenerator;
-        websiteGenerator = nullptr;
-    }
+    delete [] file_extension;
+    delete [] filename;
+    delete [] websiteGenerator;
 }
 
 char* Whiskerdocs::getFileExtension(const char* file)
