@@ -6,6 +6,7 @@ Whiskerdocs::Whiskerdocs(const char* file)
     file_extension = nullptr;
     filename = nullptr;
     websiteGenerator = nullptr;
+    webpage = nullptr;
 
     this->file_extension = getFileExtension(file);
     if(!this->file_extension || strcmp(this->file_extension, "wd") != 0)
@@ -27,6 +28,8 @@ Whiskerdocs::~Whiskerdocs()
     //Clean up pointers.
     if (file_extension   != nullptr) delete [] file_extension;
     if (filename         != nullptr) delete [] filename;
+    if (webpage          != nullptr) delete [] webpage;
+
     if (websiteGenerator != nullptr) delete websiteGenerator;
 }
 
@@ -38,7 +41,7 @@ char* Whiskerdocs::getFileExtension(const char* file)
     if(dot == nullptr || *(dot + 1) == '\0') return nullptr;
     dot++;
 
-   if (file_extension != nullptr) {
+    if (file_extension != nullptr) {
         delete[] file_extension;
         file_extension = nullptr;
     }

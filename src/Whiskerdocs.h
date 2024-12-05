@@ -10,7 +10,7 @@ class Whiskerdocs {
         bool init_success;
         char* filename;
         char* file_extension;
-
+        char* webpage;
         WebsiteGenerator* websiteGenerator;
     public:
         char* getFileExtension(const char* file);

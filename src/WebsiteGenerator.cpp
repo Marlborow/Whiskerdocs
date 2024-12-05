@@ -25,15 +25,35 @@ WebsiteGenerator::WebsiteGenerator(const char* file)
 
     sourceCode = new char[bytesRead + 1];
     strcpy(sourceCode, buffer);
-    printf("%s", sourceCode);
     fclose(sourceFile);
+
+    const char* current = sourceCode;
+    while(*current != '\0')
+    {
+        while(*current == ' ')
+        {
+            ++current;
+        }
+
+        if (*current == '\0')
+        {
+            break;
+        }
+
+        printf("%c", *current);
+        ++current;
+    }
+
+
+
+
 }
 
 WebsiteGenerator::~WebsiteGenerator()
 {
     if(sourceCode != nullptr) delete [] sourceCode;
-    if(webpage    != nullptr) delete webpage;
     if(metadata   != nullptr) delete [] metadata;
+    if(webpage    != nullptr) delete [] webpage;
 }
 
 bool WebsiteGenerator::interpreted() const
