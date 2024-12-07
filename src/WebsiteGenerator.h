@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "WebsiteGenerator/Metadata.h"
 
 class WebsiteGenerator
 {
@@ -13,7 +12,7 @@ class WebsiteGenerator
         bool interpret_success;
         char* sourceCode;
         char* webpage;
-        Metadata* metadata;
+        bool interpretData();
     public:
         WebsiteGenerator(const char* file);
         ~WebsiteGenerator();

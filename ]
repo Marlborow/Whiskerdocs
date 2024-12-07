@@ -44,7 +44,7 @@ bool isSpecialCharacter(char c)
 {
     return (
             c == '[' || c == ']' || c == '{' || c == '}' || c == '(' ||
-            c == ')' || c == ','
+            c == ')' || c == ','''
     );
 }
 
@@ -61,7 +61,7 @@ bool WebsiteGenerator::interpretData()
     if (!current) return false;
 
     char word[512] = {0};
-    size_t wordCount = 0;
+    int wordCount = 0;
 
     while (*current != '\0')
     {

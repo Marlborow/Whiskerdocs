@@ -8,6 +8,7 @@
 class Whiskerdocs {
     private:
         bool init_success;
+        bool interprete_success;
         char* filename;
         char* file_extension;
         char* webpage;
