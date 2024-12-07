@@ -3,7 +3,6 @@ Token::Token(enum TokenType type, const char* data)
 {
     this->type = type;
     this->data = data;
-
 }
 
 Token::~Token()
@@ -19,7 +18,3 @@ const char* Token::getData() const
 const unsigned int Token::getType() const {
     return this->type;
 }
-
-
-
-

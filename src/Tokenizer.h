@@ -6,6 +6,7 @@ enum TokenType{
     //?,@function, ...
     TOKEN_NULL,
     TOKEN_FUNCTION,
+    TOKEN_TYPE,
     TOKEN_DATA,
 
     //(, )
