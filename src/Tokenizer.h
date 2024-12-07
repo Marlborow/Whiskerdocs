@@ -22,11 +22,14 @@ enum TokenType{
 
 class Token {
     public:
-        char* getData();
-        unsigned int getType();
+        const char* getData() const;
+        const unsigned int getType() const;
+
+    Token(enum TokenType type, const char* data);
+    ~Token();
     private:
         enum TokenType type;
-        char* data;
+        const char* data;
 };
 
 #endif
